@@ -1,0 +1,13 @@
+.settings
+target
+.classpath
+.factorypath
+.project
+.idea
+*~
+*.iml
+*.ipr
+*.iws
+cobertura.ser
+# ignore files with pound characters
+\#*\#
