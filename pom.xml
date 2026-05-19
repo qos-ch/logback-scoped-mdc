@@ -62,10 +62,20 @@
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <release>${jdk-version}</release>
-                    <compilerArgs>
-                        <arg>--enable-preview</arg>
-                    </compilerArgs>
+                    <!-- no enable-preview here as ScopedValue is stable in JDK 25 -->
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>default-testCompile</id>
+                        <configuration>
+                            <release>25</release>
+                            <compilerArgs>
+                                <arg>--enable-preview</arg>
+                            </compilerArgs>
+                        </configuration>
+                    </execution>
+                </executions>
+
             </plugin>
 
             <plugin>
