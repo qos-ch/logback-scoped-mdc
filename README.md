@@ -6,19 +6,6 @@ ScopedValue-based MDC for [Logback Classic](https://logback.qos.ch/), designed f
 
 Logback's built-in `MDC` is `ThreadLocal`-based, so values placed in it are not inherited by virtual threads forked via `java.util.concurrent.StructuredTaskScope`. `ScopedMDC` is backed by `java.lang.ScopedValue`, which **is** inherited by forked tasks — making it a natural fit for virtual-thread and structured-concurrency code. A pattern converter (`%scopedContext` / `%Y`) lets existing logback pattern layouts read its values.
 
-## Prerequisites
-
-- JDK 25+
-- Maven 3.9+
-
-## Build & test
-
-```sh
-mvn clean verify
-```
-
-Tests run with `--enable-preview` (configured via the surefire `argLine` in `pom.xml`) because `StructuredTaskScope` is still not stable. Main sources compile as plain Java 25 — no preview flag needed at runtime since `ScopedValue` is stable.
-
 ## Usage
 
 ### Maven dependency
@@ -64,6 +51,21 @@ Then use it in a pattern:
 - `%scopedContext` — all entries, formatted as `key1=value1, key2=value2`.
 - `%scopedContext{requestId}` — value for a specific key, or empty string if absent.
 - `%scopedContext{requestId:-unknown}` — value for a specific key with default.
+
+
+## Build requirements
+
+- JDK 25+
+- Maven 3.9+
+
+## Build & test
+
+```sh
+mvn clean verify
+```
+
+Tests run with `--enable-preview` (configured via the surefire `argLine` in `pom.xml`) because `StructuredTaskScope` is still not stable. Main sources compile as plain Java 25 — no preview flag needed at runtime since `ScopedValue` is stable.
+
 
 ## License
 
