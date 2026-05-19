@@ -40,6 +40,29 @@
         <central-publishing-maven-plugin.version>0.9.0</central-publishing-maven-plugin.version>
     </properties>
 
+    <distributionManagement>
+
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+
+    </distributionManagement>
+
+    <developers>
+        <developer>
+            <id>FilipEgeric</id>
+            <name>Filip Egeric</name>
+            <email>filip.egeric@</email>
+        </developer>
+
+        <developer>
+            <id>ceki</id>
+            <name>Ceki Gulcu</name>
+            <email>ceki@qos.ch</email>
+        </developer>
+    </developers>
+
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>
