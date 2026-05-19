@@ -7,7 +7,7 @@
 
     <groupId>ch.qos.logback</groupId>
     <artifactId>logback-scoped-mdc</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0-rc0</version>
     <packaging>jar</packaging>
 
     <name>Logback Scoped MDC Module</name>
@@ -26,6 +26,9 @@
     </licenses>
 
     <properties>
+        <!-- yyyy-MM-dd'T'HH:mm:ss'Z' -->
+        <project.build.outputTimestamp>2026-05-19T07:56:00Z</project.build.outputTimestamp>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk-version>25</jdk-version>
 
