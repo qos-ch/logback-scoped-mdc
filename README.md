@@ -14,7 +14,7 @@ Logback's built-in `MDC` is `ThreadLocal`-based, so values placed in it are not 
 <dependency>
     <groupId>ch.qos.logback</groupId>
     <artifactId>logback-scoped-mdc</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${project-version}</version>
 </dependency>
 ```
 
