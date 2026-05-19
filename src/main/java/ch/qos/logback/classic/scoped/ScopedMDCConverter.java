@@ -41,6 +41,7 @@ import static ch.qos.logback.core.util.OptionHelper.extractDefaultReplacement;
  * formatting thread.</p>
  *
  * @since 1.5.33
+ * @author Filip Egeric
  */
 public class ScopedMDCConverter extends ClassicConverter {
 

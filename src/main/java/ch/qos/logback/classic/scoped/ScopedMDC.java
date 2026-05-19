@@ -34,6 +34,7 @@ import java.lang.ScopedValue.CallableOp;
  * </pre>
  *
  * @since 1.5.33
+ * @author Filip Egeric
  */
 public final class ScopedMDC {
 
